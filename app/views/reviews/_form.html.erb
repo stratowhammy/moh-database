@@ -1,0 +1,34 @@
+<%= form_for(@review) do |f| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :congress_person %><br>
+    <%= f.select :congress_person_id, CongressPerson.all.order(:last_name).collect{ |congress_person| [congress_person.full_name, congress_person.id] }  %>
+  </div>
+  <div class="field">
+    <%= f.label :bill %><br>
+    <%= f.select :bill_id, Bill.all.order(:name).collect {|bill| [bill.name, bill.id]} %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <p>1 is the lowest rating, 5 is the highest rating</p>
+    <%= f.select :rating, [1,2,3,4,5] %>
+  </div>
+  <div class="field">
+    <%= f.label :reviewed %><br>
+    <%= f.check_box :reviewed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

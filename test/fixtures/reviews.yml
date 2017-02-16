@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  congress_person_id: 1
+  bill_id: 1
+  rating: 1
+  reviewed: false
+
+two:
+  congress_person_id: 1
+  bill_id: 1
+  rating: 1
+  reviewed: false

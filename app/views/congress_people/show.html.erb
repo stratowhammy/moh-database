@@ -40,5 +40,14 @@
   <%= @congress_person.party %>
 </p>
 
+<table>
+  <tr><th>Bill</th><th>Rating</th></tr>
+  <% @congress_person.reviews.each do |review| %>
+    <tr><td><%= review.bill.name %></td><td><%= review.rating %></td></tr>
+  <% end %>
+
+
+</table>
+
 <%= link_to 'Edit', edit_congress_person_path(@congress_person) %> |
 <%= link_to 'Back', congress_people_path %>

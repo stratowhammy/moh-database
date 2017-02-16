@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Congress person:</strong>
+  <%= @review.congress_person.full_name %>
+</p>
+
+<p>
+  <strong>Bill:</strong>
+  <%= @review.bill.name %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @review.rating %>
+</p>
+
+<p>
+  <strong>Reviewed:</strong>
+  <%= @review.reviewed %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>

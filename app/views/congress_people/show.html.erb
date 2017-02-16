@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @congress_person.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @congress_person.last_name %>
+</p>
+
+<p>
+  <strong>branch:</strong>
+  <%= @congress_person.branch %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @congress_person.notes %>
+</p>
+
+<p>
+  <strong>District phone:</strong>
+  <%= @congress_person.district_phone %>
+</p>
+
+<p>
+  <strong>Capitol phone:</strong>
+  <%= @congress_person.capitol_phone %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @congress_person.district %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @congress_person.party %>
+</p>
+
+<%= link_to 'Edit', edit_congress_person_path(@congress_person) %> |
+<%= link_to 'Back', congress_people_path %>

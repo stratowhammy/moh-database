@@ -1,0 +1,49 @@
+<%= form_for(@congress_person) do |f| %>
+  <% if @congress_person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@congress_person.errors.count, "error") %> prohibited this congress_person from being saved:</h2>
+
+      <ul>
+      <% @congress_person.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :branch %><br>
+    <%= f.text_field :branch %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :district_phone %><br>
+    <%= f.text_field :district_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :capitol_phone %><br>
+    <%= f.text_field :capitol_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br>
+    <%= f.number_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :party %><br>
+    <%= f.text_field :party %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
